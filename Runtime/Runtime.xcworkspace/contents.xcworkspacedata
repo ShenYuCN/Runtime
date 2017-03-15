@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SwizzlingMethod/SwizzlingMethod.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CategoryProperty/CategoryProperty.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MethodResolution/MethodResolution.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Fastforward/Fastforward.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:NormalForward/NormalForward.xcodeproj">
+   </FileRef>
+</Workspace>
