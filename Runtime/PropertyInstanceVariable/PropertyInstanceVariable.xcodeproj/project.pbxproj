@@ -17,6 +17,8 @@
 		A57740CA1F1C8ED5006EBA3E /* PropertyInstanceVariableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A57740C91F1C8ED5006EBA3E /* PropertyInstanceVariableTests.m */; };
 		A57740D51F1C8ED5006EBA3E /* PropertyInstanceVariableUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A57740D41F1C8ED5006EBA3E /* PropertyInstanceVariableUITests.m */; };
 		A57740E41F1C8F07006EBA3E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A57740E31F1C8F07006EBA3E /* Person.m */; };
+		A57740E71F1C9D7B006EBA3E /* PersonSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = A57740E61F1C9D7B006EBA3E /* PersonSimple.m */; };
+		A57740EA1F1C9E78006EBA3E /* SYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57740E91F1C9E78006EBA3E /* SYModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		A57740D61F1C8ED5006EBA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57740E21F1C8F07006EBA3E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A57740E31F1C8F07006EBA3E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		A57740E51F1C9D7B006EBA3E /* PersonSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonSimple.h; sourceTree = "<group>"; };
+		A57740E61F1C9D7B006EBA3E /* PersonSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonSimple.m; sourceTree = "<group>"; };
+		A57740E81F1C9E78006EBA3E /* SYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYModel.h; sourceTree = "<group>"; };
+		A57740E91F1C9E78006EBA3E /* SYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,10 @@
 				A57740B31F1C8ED5006EBA3E /* ViewController.m */,
 				A57740E21F1C8F07006EBA3E /* Person.h */,
 				A57740E31F1C8F07006EBA3E /* Person.m */,
+				A57740E81F1C9E78006EBA3E /* SYModel.h */,
+				A57740E91F1C9E78006EBA3E /* SYModel.m */,
+				A57740E51F1C9D7B006EBA3E /* PersonSimple.h */,
+				A57740E61F1C9D7B006EBA3E /* PersonSimple.m */,
 				A57740AC1F1C8ED5006EBA3E /* Supporting Files */,
 			);
 			path = PropertyInstanceVariable;
@@ -284,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57740E71F1C9D7B006EBA3E /* PersonSimple.m in Sources */,
 				A57740B41F1C8ED5006EBA3E /* ViewController.m in Sources */,
+				A57740EA1F1C9E78006EBA3E /* SYModel.m in Sources */,
 				A57740BA1F1C8ED5006EBA3E /* PropertyInstanceVariable.xcdatamodeld in Sources */,
 				A57740E41F1C8F07006EBA3E /* Person.m in Sources */,
 				A57740B11F1C8ED5006EBA3E /* AppDelegate.m in Sources */,

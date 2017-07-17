@@ -6,6 +6,7 @@
 //  Copyright © 2017年 ShenYu. All rights reserved.
 //
 #import "Person.h"
+#import "PersonSimple.h"
 #import "ViewController.h"
 #import <objc/runtime.h>
 @interface ViewController ()
@@ -21,9 +22,16 @@
     
    
     
+//    获取所有成员变量也可以获取到.h文件{}里面的，而获取所有属性不能
+//    [self getAllIvarList];
+//    [self getAllProperty];
     
-    [self getAllIvarList];
-    [self getAllProperty];
+
+//    NSDictionary *dict = @{@"name":@"ShenYu",@"age":@(12),@"isAdult":}
+    NSDictionary *dict = @{@"name":@"ShenYu",@"age":@"22"};
+    PersonSimple *simple = [[PersonSimple alloc] init];
+    simple = [simple initWithDict:dict];
+    NSLog(@"name: %@, age: %@",simple.name,simple.age);
 }
 
 /** 获取所有成员变量 */
@@ -126,40 +134,6 @@
 }
 
 
-- (instancetype)initWithDict:(NSDictionary *)dict {
-    
-    if (self = [self init]) {
-        //(1)获取类的属性及属性对应的类型
-        NSMutableArray * keys = [NSMutableArray array];
-        NSMutableArray * attributes = [NSMutableArray array];
-        /*
-         * 例子
-         * name = value3 attribute = T@"NSString",C,N,V_value3
-         * name = value4 attribute = T^i,N,V_value4
-         */
-        unsigned int outCount;
-        objc_property_t * properties = class_copyPropertyList([self class], &outCount);
-        for (int i = 0; i < outCount; i ++) {
-            objc_property_t property = properties[i];
-            //通过property_getName函数获得属性的名字
-            NSString * propertyName = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
-            [keys addObject:propertyName];
-            
-            //通过property_getAttributes函数可以获得属性的名字和@encode编码
-            NSString * propertyAttribute = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
-            [attributes addObject:propertyAttribute];
-        }
-        //立即释放properties指向的内存
-        free(properties);
-        
-        //(2)根据类型给属性赋值
-        for (NSString * key in keys) {
-            if ([dict valueForKey:key] == nil) continue;
-            [self setValue:[dict valueForKey:key] forKey:key];
-        }
-    }
-    return self;
-    
-}
+
 
 @end
