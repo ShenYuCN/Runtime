@@ -27,11 +27,22 @@
 //    [self getAllProperty];
     
 
-//    NSDictionary *dict = @{@"name":@"ShenYu",@"age":@(12),@"isAdult":}
+    
+    
     NSDictionary *dict = @{@"name":@"ShenYu",@"age":@"22"};
     PersonSimple *simple = [[PersonSimple alloc] init];
     simple = [simple initWithDict:dict];
     NSLog(@"name: %@, age: %@",simple.name,simple.age);
+    
+    
+//    NSDictionary *dict22 = @{@"name":@"ShenYu",@"age":@(12),@"isAdult":@"true"};
+    NSDictionary *dict22 = @{@"name":@"ShenYu",@"age":@"12",@"isAdult":@"true"};
+
+    Person *person = [[Person alloc] init];
+    person = [person initWithDict:dict22];
+    NSLog(@"person-name: %@, person-age: %d,person-isAdult:%d",person.name,person.age,person.isAdult);
+    
+
 }
 
 /** 获取所有成员变量 */

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface Person : NSObject{
+#import "SYModel.h"
+@interface Person : SYModel{
 
     NSString *address;
 }
