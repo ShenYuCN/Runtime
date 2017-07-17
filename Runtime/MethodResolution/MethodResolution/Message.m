@@ -29,4 +29,20 @@
     return YES;
 }
 
+
+#pragma mark - The other implenment
+/*
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    if (sel == @selector(sendMessage:)) {
+        NSLog(@"enter resolveInstanceMethod");
+        class_addMethod([self class], sel, class_getMethodImplementation([self class], @selector(shenInstanceMethod:)), "v@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+-(void)shenInstanceMethod:(NSString *)str{
+        NSLog(@"resolution_way: The Other :send message:%@",str);
+
+}
+*/
 @end
