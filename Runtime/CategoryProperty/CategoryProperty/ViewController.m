@@ -22,7 +22,7 @@
     GameCtrl *ctrl = [[GameCtrl alloc] init];
     // 对象方法
     [ctrl up];
-    [ctrl down];w
+    [ctrl down];
     
     
     // 对象分类方法
@@ -35,6 +35,9 @@
     
     ctrl.price = @"$100";
     NSLog(@"%@",ctrl.price);
+    
+    ctrl.company = @"samsung";
+    NSLog(@"%@",ctrl.company);
     
 }
 

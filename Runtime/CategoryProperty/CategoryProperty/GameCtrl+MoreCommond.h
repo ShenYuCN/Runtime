@@ -16,4 +16,6 @@
 @property (nonatomic,strong) NSString *gameName;
 
 @property (nonatomic,strong) NSString *price;
+
+@property (nonatomic,strong) NSString *company;
 @end

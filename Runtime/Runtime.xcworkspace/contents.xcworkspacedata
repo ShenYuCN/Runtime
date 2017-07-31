@@ -2,13 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Model/Model.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CategoryProperty/CategoryProperty.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PropertyInstanceVariable/PropertyInstanceVariable.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SwizzlingMethod/SwizzlingMethod.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CategoryProperty/CategoryProperty.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MethodResolution/MethodResolution.xcodeproj">

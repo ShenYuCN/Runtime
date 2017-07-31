@@ -5,10 +5,9 @@
 //  Created by ShenYu on 2017/7/17.
 //  Copyright © 2017年 ShenYu. All rights reserved.
 //
-#import "Person.h"
-#import "PersonSimple.h"
-#import "ViewController.h"
 #import <objc/runtime.h>
+#import "ViewController.h"
+#import "Person.h"
 @interface ViewController ()
 
 @end
@@ -23,24 +22,12 @@
    
     
 //    获取所有成员变量也可以获取到.h文件{}里面的，而获取所有属性不能
-//    [self getAllIvarList];
-//    [self getAllProperty];
+    [self getAllIvarList];
+    
+    NSLog(@"---  获取所有属性   ---");
+    [self getAllProperty];
     
 
-    
-    
-    NSDictionary *dict = @{@"name":@"ShenYu",@"age":@"22"};
-    PersonSimple *simple = [[PersonSimple alloc] init];
-    simple = [simple initWithDict:dict];
-    NSLog(@"name: %@, age: %@",simple.name,simple.age);
-    
-    
-//    NSDictionary *dict22 = @{@"name":@"ShenYu",@"age":@(12),@"isAdult":@"true"};
-    NSDictionary *dict22 = @{@"name":@"ShenYu",@"age":@"12",@"isAdult":@"true"};
-
-    Person *person = [[Person alloc] init];
-    person = [person initWithDict:dict22];
-    NSLog(@"person-name: %@, person-age: %d,person-isAdult:%d",person.name,person.age,person.isAdult);
     
 
 }
@@ -79,7 +66,7 @@
         Ivar ivar = ivars[i];
         const char *name = ivar_getName(ivar);
         const char *type = ivar_getTypeEncoding(ivar);
-        NSLog(@"Person拥有的成员变量的类型为%s，名字为 %s ",type, name);
+        NSLog(@"Person成员变量的类型为%s，为 %s ",type, name);
 
     }
     
@@ -107,6 +94,7 @@
      
      objc_property_t：声明的属性的类型，是一个指向objc_property结构体的指针
      typedef struct objc_property *objc_property_t;
+     
      2、相关函数
      
      // 获取所有属性

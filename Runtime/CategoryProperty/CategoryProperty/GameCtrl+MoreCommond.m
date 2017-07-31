@@ -18,7 +18,6 @@
 }
 
 /*************************** 方案一   *******************/
-/**	gameName 的Getter方法  */
 - (NSString *)gameName{
     // 这些方法以键值对的形式动态地向对象添加、获取或删除关联值
     // objc_getAssociatedObject(<#id object#>, <#const void *key#>)
@@ -26,7 +25,6 @@
     return objc_getAssociatedObject(self, _cmd);
 }
 
-/**	gameName 的Setter方法  */
 - (void)setGameName:(NSString *)gameName{
 
     objc_setAssociatedObject(self, @selector(gameName), gameName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -42,4 +40,21 @@ NSString * const _recognizerPrice = @"_recognizerPrice";
 - (void)setPrice:(NSString *)price{
     objc_setAssociatedObject(self, (__bridge const void *)(_recognizerPrice), price, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+
+
+/*************************** 方案三   *******************/
+
+
+char companyKey;
+
+- (NSString *)company{
+    return objc_getAssociatedObject(self, &companyKey);
+}
+
+
+- (void)setCompany:(NSString *)company{
+    objc_setAssociatedObject(self,  &companyKey, company, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 @end
