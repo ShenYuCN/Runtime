@@ -48,10 +48,21 @@ NSString * const _recognizerPrice = @"_recognizerPrice";
 
 char companyKey;
 
+
+/** 利用参数key 将对象object中存储的对应值取出来 */
 - (NSString *)company{
     return objc_getAssociatedObject(self, &companyKey);
 }
 
+
+/**
+ set方法，将值value 跟对象object 关联起来（将值value 存储到对象object 中）
+ 参数 object：给哪个对象设置属性
+ 参数 key：一个属性对应一个Key，将来可以通过key取出这个存储的值，key 可以是任何类型：double、int 等，建议用char 可以节省字节
+ 参数 value：给属性设置的值
+ 参数policy：存储策略 （assign 、copy 、 retain就是strong
+ 
+ */
 
 - (void)setCompany:(NSString *)company{
     objc_setAssociatedObject(self,  &companyKey, company, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
