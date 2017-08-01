@@ -27,6 +27,8 @@
     
     // Logging
     NSLog(@"\n swizzled_viewDidAppear:---%@", NSStringFromClass([self class]));
+    
+    
 }
 
 void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)
