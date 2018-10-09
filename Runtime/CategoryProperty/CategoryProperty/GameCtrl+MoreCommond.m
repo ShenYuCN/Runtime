@@ -68,4 +68,12 @@ char companyKey;
     objc_setAssociatedObject(self,  &companyKey, company, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+char mIndexHH;
+- (NSUInteger)mIndex{
+   return [objc_getAssociatedObject(self, &mIndexHH) integerValue];
+}
+
+- (void)setMIndex:(NSUInteger)mIndex{
+    objc_setAssociatedObject(self, &mIndexHH, @(mIndex), OBJC_ASSOCIATION_ASSIGN);
+}
 @end

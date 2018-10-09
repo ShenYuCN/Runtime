@@ -18,4 +18,6 @@
 @property (nonatomic,strong) NSString *price;
 
 @property (nonatomic,strong) NSString *company;
+
+@property (nonatomic,assign) NSUInteger mIndex;
 @end

@@ -16,7 +16,7 @@
 		A556779D1E7935A700C53168 /* SwizzlingMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A556779C1E7935A700C53168 /* SwizzlingMethodTests.m */; };
 		A55677A81E7935A700C53168 /* SwizzlingMethodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A55677A71E7935A700C53168 /* SwizzlingMethodUITests.m */; };
 		A55677B71E7935FA00C53168 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55677B61E7935FA00C53168 /* TestViewController.m */; };
-		A55677BA1E7936A300C53168 /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = A55677B91E7936A300C53168 /* UIViewController+Tracking.m */; };
+		A58B9588216C49B700363764 /* TestViewController+SYTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = A58B9587216C49B700363764 /* TestViewController+SYTracking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		A55677A91E7935A700C53168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55677B51E7935FA00C53168 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		A55677B61E7935FA00C53168 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		A55677B81E7936A300C53168 /* UIViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
-		A55677B91E7936A300C53168 /* UIViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
+		A58B9586216C49B700363764 /* TestViewController+SYTracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestViewController+SYTracking.h"; sourceTree = "<group>"; };
+		A58B9587216C49B700363764 /* TestViewController+SYTracking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestViewController+SYTracking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 				A55677891E7935A700C53168 /* ViewController.m */,
 				A55677B51E7935FA00C53168 /* TestViewController.h */,
 				A55677B61E7935FA00C53168 /* TestViewController.m */,
-				A55677B81E7936A300C53168 /* UIViewController+Tracking.h */,
-				A55677B91E7936A300C53168 /* UIViewController+Tracking.m */,
+				A58B9586216C49B700363764 /* TestViewController+SYTracking.h */,
+				A58B9587216C49B700363764 /* TestViewController+SYTracking.m */,
 				A55677821E7935A700C53168 /* Supporting Files */,
 			);
 			path = SwizzlingMethod;
@@ -283,9 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55677BA1E7936A300C53168 /* UIViewController+Tracking.m in Sources */,
 				A556778A1E7935A700C53168 /* ViewController.m in Sources */,
 				A55677871E7935A700C53168 /* AppDelegate.m in Sources */,
+				A58B9588216C49B700363764 /* TestViewController+SYTracking.m in Sources */,
 				A55677B71E7935FA00C53168 /* TestViewController.m in Sources */,
 				A55677841E7935A700C53168 /* main.m in Sources */,
 			);

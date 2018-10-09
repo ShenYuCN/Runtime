@@ -20,12 +20,15 @@
     self.view.backgroundColor = [UIColor grayColor];
     
    
+    NSDictionary * dict = @{@"name":@"jd"};
+    Person *person = [[Person alloc] initWithDict:dict];
+    NSLog(@"%@",person.name);
     
-//    获取所有成员变量也可以获取到.h文件{}里面的，而获取所有属性不能
-    [self getAllIvarList];
+    // 获取所有成员变量也可以获取到.h文件{}里面的，而获取所有属性不能
+    //[self getAllIvarList];
     
-    NSLog(@"---  获取所有属性   ---");
-    [self getAllProperty];
+    //NSLog(@"---  获取所有属性   ---");
+    //[self getAllProperty];
     
 
     

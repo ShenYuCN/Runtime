@@ -39,6 +39,9 @@
     ctrl.company = @"samsung";
     NSLog(@"%@",ctrl.company);
     
+    NSUInteger aa = 23;
+    ctrl.mIndex = aa;
+    NSLog(@"%d",ctrl.mIndex);
 }
 
 @end

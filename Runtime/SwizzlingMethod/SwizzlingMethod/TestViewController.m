@@ -22,4 +22,8 @@
 
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (void)viewDidAppear:(BOOL)animated{
+    NSLog(@"%s",__FUNCTION__);
+}
+
 @end

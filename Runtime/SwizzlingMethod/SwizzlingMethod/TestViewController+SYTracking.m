@@ -1,15 +1,15 @@
 //
-//  UIViewController+Tracking.m
+//  TestViewController+SYTracking.m
 //  SwizzlingMethod
 //
-//  Created by ShenYu on 2017/3/15.
-//  Copyright © 2017年 ShenYu. All rights reserved.
+//  Created by ShenYu on 2018/10/9.
+//  Copyright © 2018 ShenYu. All rights reserved.
 //
 
-#import "UIViewController+Tracking.h"
+#import "TestViewController+SYTracking.h"
 #import <objc/runtime.h>
 
-@implementation UIViewController (Tracking)
+@implementation TestViewController (SYTracking)
 
 + (void)load
 {
@@ -22,13 +22,10 @@
 
 - (void)swizzled_viewDidAppear:(BOOL)animated
 {
+    NSLog(@"%s",__FUNCTION__);
+    
     // call original implementation
     [self swizzled_viewDidAppear:animated];
-    
-    // Logging
-    NSLog(@"\n swizzled_viewDidAppear:---%@", NSStringFromClass([self class]));
-    
-    
 }
 
 void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)
@@ -49,5 +46,4 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)
     }
     
 }
-
 @end
