@@ -26,6 +26,7 @@
     
     // call original implementation
     [self swizzled_viewDidAppear:animated];
+    
 }
 
 void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)
